@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FFF;
+  color: #000;
+}
+
+/* Utility CSS */
+.flx {
+  display: flex;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}
+/* / Utility CSS */
+
+.wrapper{
+  max-width: 800px;
+  margin: auto;
+  font-size: 30px;
+}
+
+/* INTESTAZIONE */
+.title{
+  font-family: 'Amatic SC';
+  font-size: 2em;
+}
+
+.title img {
+  max-height: 80px;
+}
+
+nav > * {
+  margin: 20px;
+}
+
+nav > input, nav > button{
+  padding: 8px;
+  border-radius: 10px;
+}
+
+input:focus, button:focus {
+  outline: 0;
+}
+/* / INTESTAZIONE */
+
+/* CORPO PRINCIPALE */
+.list li {
+  padding: 20px;
+  font-family: 'Caveat';
+  border-bottom: 2px solid #000;
+}
+
+.list li > * {
+  margin: 0 20px;
+}
+
+.list button {
+  border: 0;
+  border-radius: 50%;
+  padding: 5px;
+  background: #000;
+  color: #FFF;
+}
+/* / CORPO PRINCIPALE */

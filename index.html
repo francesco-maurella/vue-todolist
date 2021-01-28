@@ -4,23 +4,51 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JAVASCRIPT - VUE JS [ToDo List]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
 
-    <div id="app">
-      <input type="text" placeholder="Nuovo todo"
-      v-model="todo" v-on:keyup.enter="insertItem">
-      <button @click="insertItem">Invia</button>
+    <div class="wrapper" id="app">
+      <!-- INTESTAZIONE -->
+      <header>
+        <!-- Title -->
+        <div class="title flx center">
+          <img src="img/01-logo.jpg" alt="Logo">
+          <span>To-Do !</span>
+        </div>
+        <!-- / Title -->
+        <!-- Nav Inputs -->
+        <nav class="flx center">
+          <input type="text" placeholder="Nuovo todo"
+          v-model="todo" v-on:keyup.enter="insertItem">
+          <button @click="insertItem">Invia</button>
+        </nav>
+        <!-- / Nav Inputs -->
+      </header>
+      <!-- / INTESTAZIONE -->
 
-        <ul>
+      <!-- CORPO PRINCIPALE -->
+      <main>
+        <ol class="list">
           <li v-for="(element, i) in todoList">
-            {{element}}
+            <span>{{element}}</span>
             <button @click="removeItem(i)">X</button>
           </li>
-        </ul>
+        </ol>
+      </main>
+      <!-- / CORPO PRINCIPALE -->
 
+      <!-- FOOTER -->
+      <footer class="">
+        <div class="">
+
+        </div>
+      </footer>
+      <!-- FOOTER -->
     </div>
+
 
     <script src="js/script.js" charset="utf-8"></script>
   </body>

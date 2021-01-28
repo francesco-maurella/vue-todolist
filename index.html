@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JAVASCRIPT - VUE JS [ToDo List]</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+
+    <div id="app">
+      <input type="text" placeholder="Nuovo todo"
+      v-model="todo" v-on:keyup.enter="insertItem">
+      <button @click="insertItem">Invia</button>
+
+        <ul>
+          <li v-for="(element, i) in todoList">
+            {{element}}
+            <button @click="removeItem(i)">X</button>
+          </li>
+        </ul>
+
+    </div>
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>

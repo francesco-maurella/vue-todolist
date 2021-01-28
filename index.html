@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JAVASCRIPT - VUE JS [ToDo List]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Amatic+SC:wght@700&family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
@@ -31,20 +31,21 @@
 
       <!-- CORPO PRINCIPALE -->
       <main>
-        <ol class="list">
-          <li v-for="(element, i) in todoList">
-            <span>{{element}}</span>
-            <button @click="removeItem(i)">X</button>
+        <ul class="list">
+          <li v-for="(element, i) in todoList" class="flx">
+            <div class="list-count">{{i + 1}} )</div>
+            <div class="list-element">{{element}}</div>
+            <div class="list-button">
+              <button @click="removeItem(i)">X</button>
+            </div>
           </li>
-        </ol>
+        </ul>
       </main>
       <!-- / CORPO PRINCIPALE -->
 
       <!-- FOOTER -->
-      <footer class="">
-        <div class="">
-
-        </div>
+      <footer class="flx center">
+        <span>To-do List powered by Francesco Maurella.</span>
       </footer>
       <!-- FOOTER -->
     </div>

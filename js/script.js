@@ -10,7 +10,7 @@ new Vue({
 
   // METODI //
   methods: {
-    // Funzione Submit
+    // Funzione Inserimento elemento
     insertItem : function(){
       if (!this.todo) { // se todo è undefined
         alert('Inserisci una parola!')
@@ -20,16 +20,10 @@ new Vue({
         this.todoList.push(this.todo); // entra in todoList
         this.todo = ''; // todo torna vuoto
       }
-
-      /*
-      { // se todo esiste, e non è uguale a un elemento già in todoList
-        x : (this.todo && !this.todoList.includes(this.todo)) ?
-        this.todoList.push(this.todo) // todo entra in todoList
-        :
-        alert('Non valido') // altrimenti parte un alert
-      }
+      /* Metodo Abbreviato *
+        return (this.todo && !this.todoList.includes(this.todo)) ?
+          this.todoList.push(this.todo) : alert('Non valido')
       */
-      
     },
     // Funzione Rimuovi elemento
     removeItem : function(index) {

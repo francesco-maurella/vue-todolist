@@ -23,12 +23,12 @@ body {
 .wrapper{
   max-width: 800px;
   margin: auto;
+  font-family: 'Amatic SC';
   font-size: 30px;
 }
 
 /* INTESTAZIONE */
 .title{
-  font-family: 'Amatic SC';
   font-size: 2em;
 }
 
@@ -51,21 +51,62 @@ input:focus, button:focus {
 /* / INTESTAZIONE */
 
 /* CORPO PRINCIPALE */
+main {
+  margin: 35px 0;
+}
+
+.list {
+  min-height: 400px;
+  background-color: #E4E4E4;
+  border: 1px solid #404040;
+  border-radius: 5px;
+  box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  overflow: hidden;
+}
+
 .list li {
-  padding: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
   font-family: 'Caveat';
   border-bottom: 2px solid #000;
 }
 
+.list-count, .list-button {
+  width: 10%;
+}
+
+.list-element {
+  width: 80%;
+}
+
 .list li > * {
-  margin: 0 20px;
+  padding: 0 10px;
 }
 
 .list button {
   border: 0;
   border-radius: 50%;
-  padding: 5px;
+  font-family: 'Permanent Marker';
+  padding: 15px;
   background: #000;
   color: #FFF;
 }
 /* / CORPO PRINCIPALE */
+
+/* FOOTER */
+footer{
+  color: #E4E4E4;
+  text-shadow: 1px 1px #000;
+}
+
+footer > span:before, footer > span:after {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 100px;
+  margin: 0 25px;
+  height: 2px;
+  background: #404040;
+}
+/* / FOOTER */
